@@ -20,12 +20,12 @@ Anyway it should work with more than 2 devices on the bus
 
 Please note that you need to install the OneWire library first in your arduinono library directory
 
-<b>Usage</b>
+<b><big>Usage</big></b>
 
 Bus bus (uint8_t pin)<br>
 Create the Bus object, using a specific pin
 
-bus.begin()<br>
+<b>bus.begin()</b><br>
 Initialize the bus with a number of devices equal to zero
 
 bus.void find()<br>
@@ -44,10 +44,14 @@ bus.is26(byte j)<br>
 return true if device is from 26 family and false if not
   
 bus.get28temperature(byte j)<br>
-return temperature from the device i which is a DS1820 sensor
+return temperature from the device j which is assumed to be a DS1820 sensor
 
-  float get26temperature(byte j);
-  //mode can be "vdd" or "vad"
-  float get26voltage(byte j, char *mode);
+bus.get26temperature(byte j)<br>
+return temperature from the device j which is assumed to be a DS2438 sensor
+
+bus.get26voltage(byte j, char *mode)<br>
+return the vdd of vad voltage on the device j which is assumed to be a DS2438 sensor<br>
+mode can be "vdd" or "vad"
+
   boolean read26PageZero(byte j, uint8_t *data);
   void write26PageZero(byte j, uint8_t *data);
