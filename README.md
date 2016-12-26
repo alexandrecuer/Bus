@@ -2,13 +2,13 @@
 
 Single Wire Bus - a subclass of the OneWire library
 
-OneWire library is maintained by Paul Stoffregen
-http://www.pjrc.com/teensy/td_libs_OneWire.html
-or
+OneWire library is maintained by Paul Stoffregen<br>
+http://www.pjrc.com/teensy/td_libs_OneWire.html<br>
+or<br>
 https://github.com/PaulStoffregen/OneWire
 
-Bus class scans the 1 wire Bus connected to an arduino UNO analog pin and stores the ROMs in an array
-1-wire components are commercialized by Maxim Integrated Products, Inc.
+Bus class scans the 1 wire Bus connected to an arduino UNO analog pin and stores the ROMs in an array<br>
+1-wire components are commercialized by Maxim Integrated Products, Inc.<br>
 https://www.maximintegrated.com/en/products/digital/one-wire.html
 
 It has been tested with two configurations, corresponding to my needs :
