@@ -20,38 +20,43 @@ Anyway it should work with more than 2 devices on the bus
 
 Please note that you need to install the OneWire library first in your arduinono library directory
 
-<b><big>Usage</big></b>
+# Usage
 
-Bus bus (uint8_t pin)<br>
+<b>Bus bus (uint8_t pin)</b><br>
 Create the Bus object, using a specific pin
 
 <b>bus.begin()</b><br>
 Initialize the bus with a number of devices equal to zero
 
-bus.void find()<br>
+<b>bus.void find()</b><br>
 scan the bus and stores the ROMs in an array
 
-bus.nb()<br>
+<b>bus.nb()<b><br>
 return the number of devices on the bus
 
-bus.ROM(byte j)<br>
+<b>bus.ROM(byte j)</b><br>
 print to serial the ROM number of the device number j
 
-bus.is28(byte j)<br>
+<b>bus.is28(byte j)</b><br>
 return true if device is from 28 family and false if not
 
-bus.is26(byte j)<br>
+<b>bus.is26(byte j)</b><br>
 return true if device is from 26 family and false if not
   
-bus.get28temperature(byte j)<br>
+<b>bus.get28temperature(byte j)</b><br>
 return temperature from the device j which is assumed to be a DS1820 sensor
 
-bus.get26temperature(byte j)<br>
+<b>bus.get26temperature(byte j)</b><br>
 return temperature from the device j which is assumed to be a DS2438 sensor
 
-bus.get26voltage(byte j, char *mode)<br>
+<b>bus.get26voltage(byte j, char *mode)</b><br>
 return the vdd of vad voltage on the device j which is assumed to be a DS2438 sensor<br>
 mode can be "vdd" or "vad"
 
-  boolean read26PageZero(byte j, uint8_t *data);
-  void write26PageZero(byte j, uint8_t *data);
+<b>bus.read26PageZero(byte j, uint8_t *data)<b><br>
+read page zero on the device j which is assumed to be a DS2438 sensor, and stores the result in data<br>
+could be private only - used by get26voltage and get26temperature
+  
+<br>bus.write26PageZero(byte j, uint8_t *data)<b><br>
+write page zero on the device j which is assumed to be a DS2438 sensor<br>
+could be private only - used by get26voltage
