@@ -20,7 +20,8 @@ Anyway it should work with more than 2 devices on the bus
 
 Please note that you need to install the OneWire library first in your arduinono library directory
 
-<u>Usage</u>
+<b>Usage</b>
+
 Bus bus (uint8_t pin)<br>
 Create the Bus object, using a specific pin
 
@@ -33,13 +34,18 @@ scan the bus and stores the ROMs in an array
 bus.nb()<br>
 return the number of devices on the bus
 
-bus ROM(byte j)<br>
+bus.ROM(byte j)<br>
 print to serial the ROM number of the device number j
 
-  bool is28(byte j);
-  bool is26(byte j);
+bus.is28(byte j)<br>
+return true if device is from 28 family and false if not
+
+bus.is26(byte j)<br>
+return true if device is from 26 family and false if not
   
-  float get28temperature(byte j);
+bus.get28temperature(byte j)<br>
+return temperature from the device i which is a DS1820 sensor
+
   float get26temperature(byte j);
   //mode can be "vdd" or "vad"
   float get26voltage(byte j, char *mode);
