@@ -13,26 +13,29 @@ https://www.maximintegrated.com/en/products/digital/one-wire.html
 
 It has been tested with two configurations, corresponding to my needs :
 - one DS2438
-- one DS2438 and one DS18B20
+- one DS2438 and one DS18B20<br>
 In all cases, an analog humidity sensor HIH4000 (Honeywell International Inc.) was connected to the DS2438 VAD input
 
 Anyway it should work with more than 2 devices on the bus
 
 Please note that you need to install the OneWire library first in your arduinono library directory
 
-Usage
-Bus bus (uint8_t pin)
+<u>Usage</u>
+Bus bus (uint8_t pin)<br>
 Create the Bus object, using a specific pin
 
-bus.begin()
+bus.begin()<br>
 Initialize the bus with a number of devices equal to zero
 
-bus.void find()
+bus.void find()<br>
 scan the bus and stores the ROMs in an array
 
-bus.nb();
-return 
-  void ROM(byte j);
+bus.nb()<br>
+return the number of devices on the bus
+
+bus ROM(byte j)<br>
+print to serial the ROM number of the device number j
+
   bool is28(byte j);
   bool is26(byte j);
   
