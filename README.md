@@ -31,7 +31,7 @@ Initialize the bus with a number of devices equal to zero
 <b>bus.void find()</b><br>
 scan the bus and stores the ROMs in an array
 
-<b>bus.nb()<b><br>
+<b>bus.nb()</b><br>
 return the number of devices on the bus
 
 <b>bus.ROM(byte j)</b><br>
@@ -53,10 +53,10 @@ return temperature from the device j which is assumed to be a DS2438 sensor
 return the vdd of vad voltage on the device j which is assumed to be a DS2438 sensor<br>
 mode can be "vdd" or "vad"
 
-<b>bus.read26PageZero(byte j, uint8_t *data)<b><br>
+<b>bus.read26PageZero(byte j, uint8_t *data)</b><br>
 read page zero on the device j which is assumed to be a DS2438 sensor, and stores the result in data<br>
 could be private only - used by get26voltage and get26temperature
   
-<br>bus.write26PageZero(byte j, uint8_t *data)<b><br>
+<b>bus.write26PageZero(byte j, uint8_t *data)</b><br>
 write page zero on the device j which is assumed to be a DS2438 sensor<br>
 could be private only - used by get26voltage
