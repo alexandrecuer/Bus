@@ -15,3 +15,5 @@ The pull-up resistance (4.7K) can be soldered on the arduino card adapter<br><br
 
 #Arduino card adapter
 <img src = images/arduino_card_adapter.png><br>
+
+#Temperature and humidity sensor DS2438 only
