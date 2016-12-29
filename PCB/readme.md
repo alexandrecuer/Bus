@@ -1,7 +1,8 @@
 #Temperature and humidity sensor
-<img src = images/g3442.png><br>
+<img src = images/full_connected_sensor.jpg><br>
 <b>Sensor design with one DS2438 and one DS18B20</b><br>
-An HIH4000 humidity analog sensor is connected to the VAD input of the DS2438<br>
+<img src = images/g3442.png><br>
+HIH4000 humidity analog sensor connected to the VAD input of the DS2438<br>
 Suitable for both parasite mode and non paraistic mode (DS18B20)<br>
 The sensor can be fully functionnal without any of the 2 filtering capacitors (10nF and 100nF)<br>
 The pull-up resistance (4.7K) can be soldered on the arduino card adapter<br><br>
