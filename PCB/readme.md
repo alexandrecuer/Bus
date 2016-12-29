@@ -1,4 +1,6 @@
 #A4 sheets ready to be printed on transfer paper
+All designs already in mirroring mode<br>
+To be printed with scale 100% on a laser printer only<br>
 <a href=9_arduino_supports_12_mixed_sensors_DS18B20_DS2438.pdf>A4 sheet with 9 arduino supports and 12 DS18B20/DS2438/HIH4000 sensors</a><br>
 <br><br>
 #Temperature and humidity sensor
