@@ -18,7 +18,9 @@ In all cases, an analog humidity sensor HIH4000 (Honeywell International Inc.) w
 
 Anyway it should work with more than 2 devices on the bus
 
-Please note that you need to install the OneWire library first in your arduinono library directory
+Please note that you need to install the OneWire library first in your arduino library directory
+
+You can find various PCB designs in the PCB subdirectory in order to construct your own single wire Bus
 
 # Usage
 
