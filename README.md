@@ -14,13 +14,14 @@ https://www.maximintegrated.com/en/products/digital/one-wire.html
 It has been tested with two configurations, corresponding to my needs :
 - one DS2438
 - one DS2438 and one DS18B20<br>
+
 In all cases, an analog humidity sensor HIH4000 (Honeywell International Inc.) was connected to the DS2438 VAD input
 
 Anyway it should work with more than 2 devices on the bus
 
 Please note that you need to install the OneWire library first in your arduino library directory
 
-You can find various PCB designs in the PCB subdirectory in order to construct your own single wire Bus
+You can find various PCB designs in the <a href=PCB>PCB subdirectory</a> in order to construct your own single wire Bus
 
 # Usage
 
