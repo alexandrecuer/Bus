@@ -8,4 +8,4 @@ The pull-up resistance (4.7K) can be soldered on the arduino card adapter<br><br
 <img src = images/photoDS2438_HIH4000_DS18B20.png><br>
 
 #Arduino card adapter
-
+<img src = images/arduino_card_adapter.png><br>
