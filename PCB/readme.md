@@ -2,6 +2,7 @@
 All designs already in mirroring mode<br>
 To be printed with scale 100% on a laser printer only<br>
 <a href=9_arduino_supports_12_mixed_sensors_DS18B20_DS2438.pdf>A4 sheet with 9 arduino supports and 12 DS18B20/DS2438/HIH4000 sensors</a><br>
+<a href=8_RJ45_supports_and_15_sensors_sets_DS2438_HIH4000.pdf>A4 sheet with 8 RJ45 standalone supports and 15 DS18B20/HIH4000 sensors</a><br>
 <br><br>
 #Temperature and humidity sensor
 <img src = images/full_connected_sensor.jpg><br>
