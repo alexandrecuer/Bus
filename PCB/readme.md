@@ -7,4 +7,5 @@ The sensor can be fully functionnal without any of the 2 filtering capacitors (1
 The pull-up resistance (4.7K) can be soldered on the arduino card adapter<br><br>
 <img src = images/photoDS2438_HIH4000_DS18B20.png><br>
 
-#arduino card adapter
+#Arduino card adapter
+
