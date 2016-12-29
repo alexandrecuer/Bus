@@ -1,3 +1,6 @@
+#A4 sheets ready to be printed on transfer paper
+<a href=9_arduino_supports_12_mixed_sensors_DS18B20_DS2438.pdf>A4 sheet with 9 arduino supports and 12 DS18B20/DS2438/HIH4000 sensors</a><br>
+<br><br>
 #Temperature and humidity sensor
 <img src = images/full_connected_sensor.jpg><br>
 <b>Sensor design with one DS2438 and/or one DS18B20</b><br><br>
