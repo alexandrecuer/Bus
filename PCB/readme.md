@@ -19,3 +19,7 @@ The pull-up resistance (4.7K) can be soldered on the arduino card adapter<br><br
 #Temperature and humidity sensor DS2438 only
 <img src = images/g12.png><br>
 To be used with the RJ45 bridge adapter
+
+#RJ45 bridge adapter
+<img arc = images/gRJ45.png><br>
+RJ45 connectors slots positions correspond to a bottom side view
