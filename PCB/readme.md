@@ -22,4 +22,4 @@ To be used with the RJ45 bridge adapter
 
 #RJ45 bridge adapter
 <img src = images/gRJ45.png width=50% height=50%><br>
-RJ45 connectors slots positions correspond to a bottom side view
+RJ45 holes positions correspond to a bottom side view
