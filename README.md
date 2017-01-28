@@ -40,6 +40,14 @@ return the number of devices on the bus
 <b>bus.ROM(byte j)</b><br>
 print to serial the ROM number of the device number j
 
+<b>bus.SROM(byte j, uint8_t *addr)</b></br>
+uses the 6 first bytes of the ROM number j for macaddress generation<br>
+*addr is used to store the 6 bytes macaddress<br>
+
+<b>bus.ROMtochar(byte j)</b></br>
+convert the ROM number to char, including all zero even non significative ones<br>
+return a char usable by the print function
+
 <b>bus.is28(byte j)</b><br>
 return true if device is from 28 family and false if not
 
@@ -63,3 +71,35 @@ could be private only - used by get26voltage and get26temperature
 <b>bus.write26PageZero(byte j, uint8_t *data)</b><br>
 write page zero on the device j which is assumed to be a DS2438 sensor<br>
 could be private only - used by get26voltage
+
+# PacketBuffer
+
+A simple string class for data formatting
+
+# Usage
+
+<b>str.buffer()</b><br>
+return the string
+
+<b>str.length()</b></br>
+return the length of the string
+
+<b>str.reset()</b></br>
+reset the string to null
+
+<b>str.start(const char *server_basedir, const char *server_apikey, const int sensoring_node_id)</b></br>
+start a string able to to feed an emoncms server<br>
+See http://www.emoncms.org
+
+<b>str.end(const IPAddress server_ip)</b></br>
+end a string able to feed an emoncms server
+
+<b>printDataEMONformat(float data, const byte sensoring_base_ip, const int n, const char family[2], const char *lib)</b></br>
+format data for an emoncms feed and add to string
+
+<b>printDataLCDformat(float data, const int n, const char family[2], const char lib[2], const char unit[1])</b></br>
+format data for a lcd
+ 
+
+
+
