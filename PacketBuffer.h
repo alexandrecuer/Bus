@@ -15,37 +15,29 @@ Copyright (c) 2016, Alexandre CUER (alexandre.cuer@wanadoo.fr)
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //--------------------------------------------------------------------------
 */
-//You have to define here the number of devices on your single wire bus !!!!
-#define NB_1_WIRE 20
 
-#ifndef Bus_h
-#define Bus_h
+#ifndef PacketBuffer_h
+#define PacketBuffer_h
 
 #include "Arduino.h"
-#include "OneWire.h"
-#include "PacketBuffer.h"
+#include "Ethernet.h"
 
-class Bus : public OneWire {
+class PacketBuffer : public Print {
 public:
-  Bus(uint8_t pin) : OneWire(pin) {};
-  void begin();
-  int nb();
-  void ROM(byte j);
-  void SROM(byte j, uint8_t *addr);
-  char* ROMtochar(byte j);
-  bool is28(byte j);
-  bool is26(byte j);
-  void find();
-  float get28temperature(byte j);
-  float get26temperature(byte j);
-  //mode can be "vdd" or "vad"
-  float get26voltage(byte j, const char mode[3]);
-  boolean read26PageZero(byte j, uint8_t *data);
-  void write26PageZero(byte j, uint8_t *data);
-  //friend class PacketBuffer;
+  PacketBuffer () : _fill (0) {};
+  const char* buffer();
+  byte length();
+  void reset();
+  void start(const char *server_basedir, const char *server_apikey, const int sensoring_node_id);
+  void end(const IPAddress server_ip);
+  void printDataEMONformat(float data, const byte sensoring_base_ip, const int n, const char family[2], const char *lib);
+  void printDataLCDformat(float data, const int n, const char family[2], const char lib[2], const char unit[1]);
+  virtual size_t write (uint8_t ch)
+    { if (_fill < sizeof _buf) _buf[_fill++] = ch; }
+	
 private:
-  byte _nb;
-  byte _addr[NB_1_WIRE][8];
+  byte _fill;
+  char _buf[200];
 };
 
 #endif

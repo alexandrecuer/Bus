@@ -28,19 +28,32 @@ int Bus::nb(){
     return _nb;
   }
 
-
-//print the ROM on the serial port
-void Bus::Bus::ROM(byte j){
+//maybe obsolete
+//print the ROM number j on the serial port
+void Bus::ROM(byte j){
     byte i;
     for( i = 0; i < 8; i++){Serial.print(_addr[j][i], HEX);Serial.print(" ");}   
   }
 
+//use the 6 first bytes of the ROM number j for macaddress generation
+void Bus::SROM(byte j, uint8_t *addr){
+    for( byte i = 0; i < 6; i++)addr[i]=_addr[j][i];
+  }
+//convert the ROM to char
+//we want to print all zero even non significative ones
+//permit use of the print function via Serial or LCD
+char* Bus::ROMtochar(byte j){
+    //char chaine[16];
+	char *chaine = (char *)malloc(16*sizeof(char)); // allocate memory from the heap
+    int sz = sprintf(chaine,"%02x%02x%02x%02x%02x%02x%02x%02x",_addr[j][0],_addr[j][1],_addr[j][2],_addr[j][3],_addr[j][4],_addr[j][5],_addr[j][6],_addr[j][7]);
+	return chaine;
+} 
 bool Bus::is28(byte j){
     return _addr[j][0]==0x28;
   }
 
 bool Bus::is26(byte j){
-    if(_addr[j][0]==0x26)return true; else return false;
+    return _addr[j][0]==0x26;
   }
 
 void Bus::find(){
@@ -95,7 +108,7 @@ float Bus::get26temperature(byte j){
     else return 10000000000;
   }
 
-float Bus::get26voltage(byte j, char *mode){
+float Bus::get26voltage(byte j, const char mode[3]){
     uint8_t data[9];
     
     read26PageZero(j,data);

@@ -3,6 +3,7 @@
 #######################################
 
 Bus	KEYWORD1
+PacketBuffer	KEYWORD1 
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -11,6 +12,8 @@ Bus	KEYWORD1
 begin	KEYWORD2
 nb	KEYWORD2
 ROM	KEYWORD2
+SROM	KEYWORD2
+ROMtochar	KEYWORD2
 is28	KEYWORD2
 is26	KEYWORD2
 find	KEYWORD2
@@ -19,4 +22,13 @@ get26temperature	KEYWORD2
 get26voltage	KEYWORD2
 read26PageZero	KEYWORD2
 write26PageZero	KEYWORD2
+buffer	KEYWORD2
+length	KEYWORD2
+reset	KEYWORD2
+start	KEYWORD2
+end	KEYWORD2
+printDataEMONformat	KEYWORD2
+printDataLCDformat	KEYWORD2
+
+
 
