@@ -5,6 +5,7 @@
 
 #include "Bus.h"
 #include <SPI.h>
+#include <Ethernet.h>
 
 long lastConnectionTime = 0;
 boolean lastConnected = false;
@@ -59,7 +60,7 @@ void loop() {
   if(nbwire)
   {
   if(!client.connected() && lastConnected){Serial.println("disconnnecting");client.stop();}
-  //in case millis has retruned to 0 between two consecutive connections 
+  //in case millis has returned to 0 between two consecutive connections 
   //a return to zero of millis() which can occur after 50 days 
   if(millis()-lastConnectionTime<0)lastConnectionTime =0;
   if(!client.connected() && (millis()-lastConnectionTime > postingInterval))

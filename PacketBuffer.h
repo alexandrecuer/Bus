@@ -20,7 +20,7 @@ Copyright (c) 2016, Alexandre CUER (alexandre.cuer@wanadoo.fr)
 #define PacketBuffer_h
 
 #include "Arduino.h"
-#include "Ethernet.h"
+#include <IPAddress.h>
 
 class PacketBuffer : public Print {
 public:

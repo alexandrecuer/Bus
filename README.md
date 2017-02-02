@@ -79,7 +79,7 @@ A simple string class for data formatting
 # Usage
 
 <b>str.buffer()</b><br>
-return the string
+output the string stored in str
 
 <b>str.length()</b></br>
 return the length of the string
@@ -88,17 +88,17 @@ return the length of the string
 reset the string to null
 
 <b>str.start(const char *server_basedir, const char *server_apikey, const int sensoring_node_id)</b></br>
-start a string able to to feed an emoncms server<br>
+start a string which will feed an emoncms server<br>
 See http://www.emoncms.org
 
 <b>str.end(const IPAddress server_ip)</b></br>
-end a string able to feed an emoncms server
+end a string which will feed an emoncms server
 
-<b>printDataEMONformat(float data, const byte sensoring_base_ip, const int n, const char family[2], const char *lib)</b></br>
-format data for an emoncms feed and add to string
+<b>str.printDataEMONformat(float data, const byte sensoring_base_ip, const int n, const char family[2], const char *lib)</b></br>
+format float data for an emoncms feed and add to string stored in str
 
-<b>printDataLCDformat(float data, const int n, const char family[2], const char lib[2], const char unit[1])</b></br>
-format data for a lcd
+<b>str.printDataLCDformat(float data, const int n, const char family[2], const char lib[2], const char unit[1])</b></br>
+format float data for a lcd and add to string stored in str
  
 
 
