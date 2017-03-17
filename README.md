@@ -1,5 +1,7 @@
 # Bus
 
+OLD VERSION - USE dynaBus
+
 Single Wire Bus - a subclass of the OneWire library
 
 OneWire library is maintained by Paul Stoffregen<br>
